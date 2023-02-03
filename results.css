@@ -26,10 +26,11 @@ button:hover {
 
 .results {
     font-size: 130%;
+    padding: 30px;
 }
 
 .choice {
-    font-size: 130%;
+    font-size: 100%;
 }
 
 body {
