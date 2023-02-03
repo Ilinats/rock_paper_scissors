@@ -1,0 +1,43 @@
+#frm1{
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 3%;
+    font-size: 30px;
+    color: #27425d;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button {
+    font-size: 1.4rem;
+    padding: 0.5rem 1rem;
+    color: #27425d;
+    border-radius: 5rem;
+    border: 3px solid #27425d;
+    box-shadow: 0 0 2px rgb(255 255 255 / 12%), 0 0 4px rgb(255 255 255 / 12%), 0 0 8px rgb(255 255 255 / 12%), 0 0 16px rgb(255 255 255 / 12%), 0 0 32px rgb(255 255 255 / 12%), 0 0 64px rgb(255 255 255 / 12%);
+}
+
+
+button:hover {
+    transform: scale(1.1); 
+}
+
+.results {
+    font-size: 130%;
+}
+
+.choice {
+    font-size: 130%;
+}
+
+body {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+html {
+    height: 100%;
+}

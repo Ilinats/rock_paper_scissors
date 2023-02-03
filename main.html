@@ -9,18 +9,18 @@
         <a class = "text">
             Pick one!
         </a>
-        <div class = "options">
-            <button id = "button1" class = "moves"> 
+        <form class = "options" action="results.html">
+            <button id = "button1" class = "moves" data-index="0" onclick="saveAnswer(this);"> 
                 <img src="rock.png" id = "img1"/>
             </button>
 
-            <button id = "button2" class = "moves"> 
+            <button id = "button2" class = "moves" data-index="2" onclick="saveAnswer(this);" > 
                 <img src="paper.png" id = "img2"/>
             </button>
 
-            <button id = "button3" class = "moves"> 
+            <button id = "button3" class = "moves" data-index="3" onclick="saveAnswer(this);"> 
                 <img src="scissors.png" id = "img3"/>
             </button>
-        </div>
+        </form>
     </body>
 </html>
