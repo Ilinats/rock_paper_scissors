@@ -2,6 +2,8 @@ var playerAnswer;
 var generatedAnswer;
 var result;
 
+const Options = ["rock.png", "paper.png", "scissors.png"];
+
 function saveAnswer(btn) {
 
     generatedAnswer = Math.floor(Math.random() * 3);
@@ -20,6 +22,32 @@ function saveAnswer(btn) {
     localStorage.setItem("GeneratedAnswer", generatedAnswer);
 }
 
-// window.onload = function imageChange() {
-//     document.getElementById("myImageId").src="newSource.png";
+window.addEventListener("load", startShuffle, false);
+
+var interval;
+
+function startShuffle() {
+    var index = 0;
+    interval = setInterval(() =>
+        {
+            console.log("Minava 2: " + index);
+            document.getElementById("myImageId").src = Options[Math.floor(Math.random() * 3)];
+        }
+        ,100);
+}
+function stopShuffle() {
+  clearInterval(interval);
+}
+
+// var isClicked = 0;
+
+// function ImageSet() {
+//     let index = Math.floor(Math.random() * 3);
+//     document.getElementById("myImageId").src = Options[index];
+//     if(!isClicked)
+//         setTimeout(ImageSet, 50);
+// }
+
+// function stopImage() {
+//   isClicked = 1;
 // }

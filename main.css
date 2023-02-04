@@ -1,28 +1,17 @@
 body {
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     overflow: hidden;
 }
 
 html {
-    height: 100%;
-}
-
-table {
-    height: 100%; 
-    margin: auto;
-}
-
-tr {
-    height: 33%;
-}
-
-#td1 {
-    width: 20%;
+    height: 100vh;
+    width: 100vw;
 }
 
 img {
-    max-width: 40%;  
-    height: auto;  
+    max-width: 40%;
+    height: auto;
 }
 
 #scissors {
@@ -31,14 +20,49 @@ img {
 }
 
 .options {
-    display:block; 
+    display: block;
     margin: auto;
 }
 
-.moves:hover {
-    transform: scale(1.1); 
+button:hover {
+    transform: scale(1.1);
 }
 
 button {
-    display: grid;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+}
+
+.container1 {
+    position: absolute;
+    top: 0%;
+    left: 10%;
+    width: 30vw;
+    height: 30vh;
+}
+
+.container2 {
+    position: absolute;
+    top: 33%;
+    left: 10%;
+    width: 30vw;
+    height: 30vh;
+}
+
+.container3 {
+    position: absolute;
+    top: 66%;
+    left: 10%;
+    width: 30vw;
+    height: 30vh;
+}
+
+.container4 {
+    position: absolute;
+    top: 33%;
+    left: 56%;
+    width: 30vw;
+    height: 30vh;
 }

@@ -1,43 +1,28 @@
 <!DOCTYPE html>
-<html> 
-    <head>  
-        <link href="main.css" rel="stylesheet">
-        <script defer src="main.js"></script>
-        <title>Rock, Paper, Scissors</title>
-    </head>
-    <body>
-        <!-- <img id="imgid" src="scissors.png">
-        <form class = "options" action="results.html">
-            <button id = "button1" class = "moves" data-index="0" onclick="saveAnswer(this);"> 
-                <img src="rock.png" id = "img1"/>
-            </button>
+<html>
 
-            <button id = "button2" class = "moves" data-index="1" onclick="saveAnswer(this);" > 
-                <img src="paper.png" id = "img2"/>
-            </button>
+<head>
+    <link href="main.css" rel="stylesheet">
+    <script defer src="main.js"></script>
+    <title>Rock, Paper, Scissors</title>
+</head>
 
-            <button id = "button3" class = "moves" data-index="2" onclick="saveAnswer(this);"> 
-                <img src="scissors.png" id = "img3"/>
-            </button>
-        </form> -->
+<body>
+    </div> -->
 
-        <table>
-            <tr>
-                <td><img style="display:block; margin: auto;" src="rock.png"></td>
-                <td id="td1"></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td><img class='options' src="paper.png"></td>
-                <td></td>
-                <td><img class='options 'src="paper.png"></td>
-            </tr>
-            <tr>
-                <td><img id='scissors' class='options' src="scissors.png"></td>
-                <td></td>
-                <td></td>
-            </tr>
-        </table>
+    <div class="container1">
+        <button><img class="options" src="rock.png" onclick="stopShuffle()"></button>
+    </div>
+    <div class="container2">
+        <button><img class="options" src="paper.png" onclick="stopShuffle()"></button>
+    </div>
+    <div class="container3">
+        <button><img id="scissors" class="options" src="scissors.png" onclick="stopShuffle()"></button>
+    </div>
+    <div class="container4">
+        <button><img id="myImageId" class="options" src="rock.png"></button>
+    </div>
 
-    </body>
+</body>
+
 </html>
