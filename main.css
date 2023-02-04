@@ -1,40 +1,44 @@
 body {
     height: 100%;
-    position: relative;
     overflow: hidden;
-    background-position: center center;
 }
 
 html {
     height: 100%;
 }
 
-.options { 
-    padding: 23% 0;
-    text-align: center;
+table {
+    height: 100%; 
+    margin: auto;
 }
 
-.moves {
-    background-color: white;
-    border: none;
+tr {
+    height: 33%;
+}
+
+#td1 {
+    width: 20%;
 }
 
 img {
-    max-width: 50%;  
+    max-width: 40%;  
     height: auto;  
+}
+
+#scissors {
+    max-width: 30%;
+    height: auto;
+}
+
+.options {
+    display:block; 
+    margin: auto;
 }
 
 .moves:hover {
     transform: scale(1.1); 
 }
 
-.text {
-    text-align: center;
-    position: absolute;
-    width: 80%;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 3.5rem;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+button {
+    display: grid;
 }

@@ -19,3 +19,7 @@ function saveAnswer(btn) {
     localStorage.setItem("Result", result);
     localStorage.setItem("GeneratedAnswer", generatedAnswer);
 }
+
+// window.onload = function imageChange() {
+//     document.getElementById("myImageId").src="newSource.png";
+// }

@@ -6,9 +6,7 @@
         <title>Rock, Paper, Scissors</title>
     </head>
     <body>
-        <a class = "text">
-            Pick one!
-        </a>
+        <!-- <img id="imgid" src="scissors.png">
         <form class = "options" action="results.html">
             <button id = "button1" class = "moves" data-index="0" onclick="saveAnswer(this);"> 
                 <img src="rock.png" id = "img1"/>
@@ -21,6 +19,25 @@
             <button id = "button3" class = "moves" data-index="2" onclick="saveAnswer(this);"> 
                 <img src="scissors.png" id = "img3"/>
             </button>
-        </form>
+        </form> -->
+
+        <table>
+            <tr>
+                <td><img style="display:block; margin: auto;" src="rock.png"></td>
+                <td id="td1"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><img class='options' src="paper.png"></td>
+                <td></td>
+                <td><img class='options 'src="paper.png"></td>
+            </tr>
+            <tr>
+                <td><img id='scissors' class='options' src="scissors.png"></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
     </body>
 </html>
