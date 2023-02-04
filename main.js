@@ -2,13 +2,6 @@ var playerAnswer;
 var generatedAnswer;
 var result;
 
-const Options = {
-    rock: 0,
-    paper: 1,
-    scissors: 2
-};
-
-
 function saveAnswer(btn) {
 
     generatedAnswer = Math.floor(Math.random() * 3);
