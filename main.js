@@ -5,8 +5,6 @@ var result;
 const Options = ["rock.png", "paper.png", "scissors.png"];
 
 function saveAnswer(btn) {
-
-    generatedAnswer = Math.floor(Math.random() * 3);
     playerAnswer = btn.dataset.index;
 
     if(generatedAnswer == playerAnswer) 
@@ -27,27 +25,28 @@ window.addEventListener("load", startShuffle, false);
 var interval;
 
 function startShuffle() {
-    var index = 0;
     interval = setInterval(() =>
         {
-            console.log("Minava 2: " + index);
-            document.getElementById("myImageId").src = Options[Math.floor(Math.random() * 3)];
+            let index = Math.floor(Math.random() * 3);
+            document.getElementById("myImageId").src = Options[index];
+            generatedAnswer = index;
         }
         ,100);
 }
-function stopShuffle() {
+
+function stopShuffle(elem) {
   clearInterval(interval);
+  console.log(elem);
+  elem.classList.add('winner');
+  document.getElementById("myImageId").classList.add('loser');
+
+//   document.getElementsByClassName('btn').
+
 }
 
-// var isClicked = 0;
-
-// function ImageSet() {
-//     let index = Math.floor(Math.random() * 3);
-//     document.getElementById("myImageId").src = Options[index];
-//     if(!isClicked)
-//         setTimeout(ImageSet, 50);
-// }
-
-// function stopImage() {
-//   isClicked = 1;
+// function isCorrect() {
+//     if(generatedAnswer < 2) 
+//         options.classList.add('correct');
+//     else
+//         options.classList.add('wrong');
 // }

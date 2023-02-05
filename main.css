@@ -20,20 +20,27 @@ img {
 }
 
 .options {
-    display: block;
-    margin: auto;
+    /* display: block;
+    margin: auto; */
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
 
-button:hover {
-    transform: scale(1.1);
+.btn:hover {
+    transform: translateY(-50%) translateX(-50%) scale(1.1);
+    cursor: pointer;
 }
 
-button {
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    border: none;
+.winner {
+    filter: hue-rotate(45deg) saturate(200%);
 }
+
+.loser {
+    filter: hue-rotate(325deg) saturate(500%);
+}
+
 
 .container1 {
     position: absolute;
@@ -65,4 +72,11 @@ button {
     left: 56%;
     width: 30vw;
     height: 30vh;
+}
+
+.container5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
 }
