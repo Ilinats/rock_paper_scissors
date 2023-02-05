@@ -25,7 +25,7 @@ img {
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    transform: translate(-50%, -50%);
 }
 
 .btn:hover {
@@ -69,16 +69,16 @@ img {
 .container4 {
     position: absolute;
     top: 33%;
-    left: 56%;
+    left: 63%;
     width: 30vw;
     height: 30vh;
 }
 
 .container5 {
+    padding: 1rem;
     position: absolute;
     top: 50%;
     left: 50%;
-    font-size: 5rem;
     transform: translateY(-50%) translateX(-50%);
 }
 
@@ -87,6 +87,7 @@ img {
 }
 
 .Button {
+    margin: 0.5rem;
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
     color: #27425d;
@@ -97,4 +98,14 @@ img {
 
 .Button:hover {
     transform: scale(1.1); 
+}
+
+.container5 > div {
+    text-align: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+#Results {
+    font-size: 5rem;
 }

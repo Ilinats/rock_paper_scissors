@@ -8,18 +8,6 @@
 </head>
 
 <body>
-    <!-- <div class="container1">
-        <button><img class="options" src="rock.png" onclick="stopShuffle()"></button>
-    </div>
-    <div class="container2">
-        <button><img class="options" src="paper.png" onclick="stopShuffle()"></button>
-    </div>
-    <div class="container3">
-        <button><img id="scissors" class="options" src="scissors.png" onclick="stopShuffle()"></button>
-    </div>
-    <div class="container4">
-        <button><img id="myImageId" class="options" src="rock.png"></button>
-    </div> -->
     <div class="container1">
         <img class="btn options" data-index='0' src="rock.png" onclick="stopShuffle(this)">
     </div>
@@ -30,13 +18,16 @@
         <img id="scissors" class="btn options" data-index='2' src="scissors.png" onclick="stopShuffle(this)">
     </div>
     <div class="container4">
-        <img id="myImageId" class="options" src="rock.png">
+        <img id="myImageId" class="options btn" src="rock.png">
     </div>
 
-    <div class="container5">
-        <p class="options" id="Results"></p>
-        <button id='playAgain' class="hide Button" onclick="window.location.href='main.html'">Play again</button>
-        <button id="exit" class="hide Button" onclick="window.location.href='index.html'">Exit</button>
+    <div id="resultContainer" class="container5 hide">
+        <div id="Results"></div>
+        <div>
+            <button id='playAgain' class="Button" onclick="playAgain();">Play
+                again</button>
+            <button id="exit" class="Button" onclick="window.location.href='index.html'">Exit</button>
+        </div>
     </div>
 
 </body>
