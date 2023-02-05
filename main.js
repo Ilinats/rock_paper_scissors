@@ -1,24 +1,8 @@
 var playerAnswer;
 var generatedAnswer;
 var result;
-
 const Options = ["rock.png", "paper.png", "scissors.png"];
-
-function saveAnswer(btn) {
-    playerAnswer = btn.dataset.index;
-
-    if(generatedAnswer == playerAnswer) 
-        result = 0;     //Result equals 0 because there is a draw
-    else if(generatedAnswer == 0 && playerAnswer == 2)
-        result = 2;    //Greater than 1 when computer wins
-    else if(generatedAnswer == 2 && playerAnswer == 0)
-        result = 1;     //1 when player wins
-    else 
-        result = (generatedAnswer > playerAnswer) ? 2 : 1;
-        
-    localStorage.setItem("Result", result);
-    localStorage.setItem("GeneratedAnswer", generatedAnswer);
-}
+const Results_table = ["It's a draw!", "You win!", "You lose!"];
 
 window.addEventListener("load", startShuffle, false);
 
@@ -35,18 +19,32 @@ function startShuffle() {
 }
 
 function stopShuffle(elem) {
-  clearInterval(interval);
-  console.log(elem);
-  elem.classList.add('winner');
-  document.getElementById("myImageId").classList.add('loser');
-
-//   document.getElementsByClassName('btn').
-
+    clearInterval(interval);
+    playerAnswer = elem.dataset.index;
+    checkAnswer();
+    addClass(elem);
 }
 
-// function isCorrect() {
-//     if(generatedAnswer < 2) 
-//         options.classList.add('correct');
-//     else
-//         options.classList.add('wrong');
-// }
+function checkAnswer() {
+    if(generatedAnswer == playerAnswer) 
+        result = 0;     //Result equals 0 because there is a draw
+    else if(generatedAnswer == 0 && playerAnswer == 2)
+        result = 2;    //Greater than 1 when computer wins
+    else if(generatedAnswer == 2 && playerAnswer == 0)
+        result = 1;     //1 when player wins
+    else 
+        result = (generatedAnswer > playerAnswer) ? 2 : 1;
+}
+
+function addClass(elem) {
+    document.getElementById('Results').innerHTML = Results_table[result];
+    document.getElementById("exit").classList.remove("hide");
+    document.getElementById("playAgain").classList.remove("hide");
+    if(result == 1) {
+        elem.classList.add('winner');
+        document.getElementById("myImageId").classList.add('loser');
+    } else if(result == 2) {
+        elem.classList.add('loser');
+        document.getElementById("myImageId").classList.add('winner'); 
+    }
+}

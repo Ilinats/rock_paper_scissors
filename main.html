@@ -21,20 +21,22 @@
         <button><img id="myImageId" class="options" src="rock.png"></button>
     </div> -->
     <div class="container1">
-        <img class="btn options" src="rock.png" onclick="stopShuffle(this)">
+        <img class="btn options" data-index='0' src="rock.png" onclick="stopShuffle(this)">
     </div>
     <div class="container2">
-        <img class="btn options" src="paper.png" onclick="stopShuffle(this)">
+        <img class="btn options" data-index='1' src="paper.png" onclick="stopShuffle(this)">
     </div>
     <div class="container3">
-        <img id="scissors" class="btn options" src="scissors.png" onclick="stopShuffle(this)">
+        <img id="scissors" class="btn options" data-index='2' src="scissors.png" onclick="stopShuffle(this)">
     </div>
     <div class="container4">
         <img id="myImageId" class="options" src="rock.png">
     </div>
 
     <div class="container5">
-        <p class="options">Tie!</p>
+        <p class="options" id="Results"></p>
+        <button id='playAgain' class="hide Button" onclick="window.location.href='main.html'">Play again</button>
+        <button id="exit" class="hide Button" onclick="window.location.href='index.html'">Exit</button>
     </div>
 
 </body>
