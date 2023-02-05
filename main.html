@@ -9,10 +9,10 @@
 
 <body>
     <div class="container1">
-        <img class="btn options" data-index='0' src="rock.png" onclick="stopShuffle(this)">
+        <img id="rock" class="btn options" data-index='0' src="rock.png" onclick="stopShuffle(this)">
     </div>
     <div class="container2">
-        <img class="btn options" data-index='1' src="paper.png" onclick="stopShuffle(this)">
+        <img id="paper" class="btn options" data-index='1' src="paper.png" onclick="stopShuffle(this)">
     </div>
     <div class="container3">
         <img id="scissors" class="btn options" data-index='2' src="scissors.png" onclick="stopShuffle(this)">
@@ -32,7 +32,7 @@
 
     <div class="container6">
         <p id="playerResult" style='float:left; margin-right: 1rem;'></p>
-        <p style='float:left;'>–</p>
+        <p style='float:left;'>—</p>
         <p id="generatedResult" style='margin-left: 1rem; float:left;'></p>
     </div>
 

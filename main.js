@@ -26,6 +26,9 @@ function startShuffle() {
 function stopShuffle(elem) {
     clearInterval(interval);
     playerAnswer = elem.dataset.index;
+    document.getElementById('paper').style.pointerEvents = 'none';
+    document.getElementById('scissors').style.pointerEvents = 'none';
+    document.getElementById('rock').style.pointerEvents = 'none';
     checkAnswer();
     addClass(elem);
 }
@@ -44,6 +47,7 @@ function checkAnswer() {
 function addClass(elem) {
     document.getElementById('Results').innerHTML = Results_table[result];
     document.getElementById("resultContainer").classList.remove("hide");
+    
     if(result == 1) {
         playerScore ++;
         elem.classList.add('winner');
@@ -56,15 +60,17 @@ function addClass(elem) {
 }
 
 function playAgain() {
+    document.getElementById('paper').style.pointerEvents = 'auto';
+    document.getElementById('scissors').style.pointerEvents = 'auto';
+    document.getElementById('rock').style.pointerEvents = 'auto';
     startShuffle();
     document.getElementById("resultContainer").classList.add("hide");
     var buttons = document.getElementsByClassName('btn');
-    console.log(buttons)
+    
     for (let button of buttons) {
         button.classList.remove('loser');
         button.classList.remove('winner');
     }
-    console.log(generatedScore);
-    console.log(playerScore);
+    
     return false;
 }
