@@ -109,3 +109,12 @@ img {
 #Results {
     font-size: 5rem;
 }
+
+.container6 {
+    padding: 1rem;
+    position: absolute;
+    font-size: 3rem;
+    top: 90%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}

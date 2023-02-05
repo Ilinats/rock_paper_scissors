@@ -1,7 +1,8 @@
 var playerAnswer;
 var generatedAnswer;
 var result;
-var currentScore;
+var playerScore = 0;
+var generatedScore = 0;
 const Options = ["rock.png", "paper.png", "scissors.png"];
 const Results_table = ["It's a draw!", "You win!", "You lose!"];
 
@@ -17,6 +18,9 @@ function startShuffle() {
             generatedAnswer = index;
         }
         ,100);
+
+        document.getElementById("playerResult").innerHTML = playerScore;
+        document.getElementById("generatedResult").innerHTML = generatedScore;
 }
 
 function stopShuffle(elem) {
@@ -41,9 +45,11 @@ function addClass(elem) {
     document.getElementById('Results').innerHTML = Results_table[result];
     document.getElementById("resultContainer").classList.remove("hide");
     if(result == 1) {
+        playerScore ++;
         elem.classList.add('winner');
         document.getElementById("myImageId").classList.add('loser');
     } else if(result == 2) {
+        generatedScore++;
         elem.classList.add('loser');
         document.getElementById("myImageId").classList.add('winner'); 
     }
@@ -58,5 +64,7 @@ function playAgain() {
         button.classList.remove('loser');
         button.classList.remove('winner');
     }
+    console.log(generatedScore);
+    console.log(playerScore);
     return false;
 }
